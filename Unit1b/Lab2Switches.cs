@@ -1,3 +1,4 @@
+// I wrote this code before doing the Correct Errors lab, and I couldn't beleive we chose the same names for a bunch of objects. 
 using System;
 					
 public class Program
