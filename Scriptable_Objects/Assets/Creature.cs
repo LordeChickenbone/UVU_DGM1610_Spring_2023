@@ -10,26 +10,26 @@ public class Creature : ScriptableObject
     public int creatureArmor;
     public int creatureAttack;
 
-    public void Attack(int enemyAttack)
+    public void Attack(int damage)
     {
         if(creatureArmor > 0)
         {
-            UpdateArmor(enemyAttack);
+            UpdateArmor(damage);
         }
         else
         {
-            UpdateHealth(enemyAttack);
+            UpdateHealth(damage);
         }
   
 
     }
-    public void UpdateArmor(int enemyAttack)
+    public void UpdateArmor(int damage)
     {
-        creatureArmor -= enemyAttack;
+        creatureArmor -= damage;
     }
 
-    public void UpdateHealth(int enemyAttack)
+    public void UpdateHealth(int damage)
     {
-        creatureHealth -= enemyAttack;
+        creatureHealth -= damage;
     }
 }
