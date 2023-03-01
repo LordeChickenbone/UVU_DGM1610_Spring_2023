@@ -10,14 +10,14 @@ public class FloatData : ScriptableObject
 
     public float value;
 
-    public void UpdateValue(float number)
+    public void UpdateValue(float num)
     {
-        value += number;
+        value += num;
     }
 
-    public void ReplaceValue(float number)
+    public void ReplaceValue(float num)
     {
-        value = number;
+        value = num;
     }
 
     public void DisplayImage(Image img)
