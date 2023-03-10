@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80b7c4b641391e046af659dc993d1a61, type: 3}
   m_Name: Orc
   m_EditorClassIdentifier: 
+  onZeroEvent:
+    m_PersistentCalls:
+      m_Calls: []
   creatureType: Orc
   creatureHealth: 20
   creatureArmor: 10
