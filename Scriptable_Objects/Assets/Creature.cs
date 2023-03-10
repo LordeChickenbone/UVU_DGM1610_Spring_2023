@@ -19,13 +19,9 @@ public class Creature : ScriptableObject
         {
             UpdateArmor(damage);
         }
-        else if(creatureHealth > 0)
-        {
-            UpdateHealth(damage);
-        }
         else
         {
-            creatureAttack = 0;
+            UpdateHealth(damage);
         }
     }
     public void UpdateArmor(int damage)

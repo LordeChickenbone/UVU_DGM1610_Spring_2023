@@ -466,6 +466,7 @@ GameObject:
   - component: {fileID: 740300318}
   - component: {fileID: 740300314}
   - component: {fileID: 740300319}
+  - component: {fileID: 740300320}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Untagged
@@ -612,10 +613,9 @@ Transform:
   m_LocalPosition: {x: -1.59, y: -1.84, z: 0}
   m_LocalScale: {x: 1.5461, y: 1.5461, z: 1.5461}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1199757213}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &740300318
 Rigidbody:
@@ -702,6 +702,58 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &740300320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740300313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2033fef3bdf739428f685c7fa28fecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathTriggerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: b0c2645dc51a75d46948aa3eff221f40, type: 2}
+        m_TargetAssemblyTypeName: Creature, Assembly-CSharp
+        m_MethodName: SetAttack
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 756199362}
+        m_TargetAssemblyTypeName: CreatureStatTextBehavior, Assembly-CSharp
+        m_MethodName: UpdateStat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 740300313}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  creature: {fileID: 11400000, guid: b0c2645dc51a75d46948aa3eff221f40, type: 2}
 --- !u!1 &756199360
 GameObject:
   m_ObjectHideFlags: 0
@@ -5701,12 +5753,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1199757210}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6467887, y: 0.64678866, z: 0.64678866}
+  m_LocalPosition: {x: -1.59, y: -1.84, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 740300317}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &1207897243
 GameObject:
@@ -15806,14 +15858,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1766416094}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9251546, y: 0.9251546, z: 0.9251546}
+  m_LocalRotation: {x: -0.13361722, y: 0.69436765, z: -0.6943677, w: 0.13361734}
+  m_LocalPosition: {x: 3.3777, y: -1.8766, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2009298816}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 68.215, y: 90, z: -90}
 --- !u!1 &1836409153
 GameObject:
   m_ObjectHideFlags: 0
@@ -16346,6 +16398,7 @@ GameObject:
   - component: {fileID: 2009298817}
   - component: {fileID: 2009298813}
   - component: {fileID: 2009298818}
+  - component: {fileID: 2009298819}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Untagged
@@ -16492,8 +16545,7 @@ Transform:
   m_LocalPosition: {x: 3.3777, y: -1.8766, z: 0}
   m_LocalScale: {x: 1.0809004, y: 1.0809004, z: 1.0809004}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1766416097}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16582,6 +16634,58 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2009298819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009298812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2033fef3bdf739428f685c7fa28fecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathTriggerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 0529121b5913e7d40a8977112217fa37, type: 2}
+        m_TargetAssemblyTypeName: Creature, Assembly-CSharp
+        m_MethodName: SetAttack
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 952431974}
+        m_TargetAssemblyTypeName: CreatureStatTextBehavior, Assembly-CSharp
+        m_MethodName: UpdateStat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2009298812}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  creature: {fileID: 11400000, guid: 0529121b5913e7d40a8977112217fa37, type: 2}
 --- !u!1 &2037544537
 GameObject:
   m_ObjectHideFlags: 0
