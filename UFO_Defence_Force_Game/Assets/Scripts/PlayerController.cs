@@ -5,14 +5,11 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float horizontalInput;
-    public float speed = 20;
-    public float xRange = 35;
+    public float speed = 20.0f;
+    public float xRange = 35.5f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Transform blaster;
+    public GameObject blasterBolt;
 
     // Update is called once per frame
     void Update()
@@ -35,6 +32,17 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
 
+        //if space is pressed, fire blaster
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            //create blaster bolt at the blaster position, keeping object rotation
+            Instantiate(blasterBolt, blaster.transform.position, blasterBolt.transform.rotation);
+        }
+    }
 
+    // Delete any object with a trigger that hits the player
+    private void OnTriggerEnter(Collider other)
+    {
+        Destroy(other.gameObject);
     }
 }
