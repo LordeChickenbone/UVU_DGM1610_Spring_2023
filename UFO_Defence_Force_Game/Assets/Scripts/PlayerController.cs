@@ -45,4 +45,9 @@ public class PlayerController : MonoBehaviour
     {
         Destroy(other.gameObject);
     }
+
+    public void UpdateSpeed(float num)
+    {
+        speed += num;
+    }
 }
