@@ -301,7 +301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUpSpawner: {fileID: 99410619}
-  powerUp: {fileID: 3478147069588342659, guid: a88b22a04cda27744a3e235292ce2ebe, type: 3}
+  powerUp: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0

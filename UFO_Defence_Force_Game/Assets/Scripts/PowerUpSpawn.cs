@@ -8,6 +8,6 @@ public class PowerUpSpawn : MonoBehaviour
 
     public void Start()
     {
-        Instantiate(powerUp, powerUpSpawner.transform.position, powerUp.transform.rotation);
+        //Instantiate(powerUp, powerUpSpawner.transform.position, powerUp.transform.rotation);
     }
 }
