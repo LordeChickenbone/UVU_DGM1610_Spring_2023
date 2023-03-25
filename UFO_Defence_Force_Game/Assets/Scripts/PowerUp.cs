@@ -9,6 +9,6 @@ public class PowerUp : MonoBehaviour
     {
         collectPowerUpEvent.Invoke();
         Destroy(gameObject);
-        Debug.Log("Ship speed +5!");
+        Debug.Log("Ship speed +2!");
     }
 }
