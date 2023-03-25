@@ -8,6 +8,7 @@ public class PowerUp : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         collectPowerUpEvent.Invoke();
+        Destroy(gameObject);
         Debug.Log("Ship speed +5!");
     }
 }
