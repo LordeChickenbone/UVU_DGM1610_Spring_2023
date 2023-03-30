@@ -141,3 +141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0f205d6f669d6e4cb103bc246a7b377, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreManager: {fileID: 0}
+  gameManager: {fileID: 0}
+  scoreToGive: 5

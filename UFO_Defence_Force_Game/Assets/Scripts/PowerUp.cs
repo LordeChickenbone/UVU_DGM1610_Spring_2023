@@ -1,13 +1,20 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class PowerUp : MonoBehaviour
 {
-    public UnityEvent collectPowerUpEvent;
+    public PlayerController playerController;
+    public float speedIncrease = 2.0f;
+
+    private void Start()
+    {
+        playerController = GameObject.Find("Player").GetComponent<PlayerController>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        collectPowerUpEvent.Invoke();
+        playerController.UpdateSpeed(speedIncrease);
         Destroy(gameObject);
         Debug.Log("Ship speed +2!");
     }

@@ -4,8 +4,20 @@ using UnityEngine;
 
 public class DetectCollision : MonoBehaviour
 {
+    public ScoreManagerBehavior scoreManager;
+    public GameManager gameManager;
+
     float topBounds = 25.0f;
     float lowerBounds = -17.0f;
+
+    public int scoreToGive = 10;
+
+    private void Start()
+    {
+        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManagerBehavior>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
+
     void Awake()
     {
         Time.timeScale = 1;
@@ -13,6 +25,7 @@ public class DetectCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        scoreManager.IncreaseScore(scoreToGive);
         Destroy(other.gameObject); //destroy other game object
         Destroy(gameObject); //destroy itself
     }
@@ -27,7 +40,7 @@ public class DetectCollision : MonoBehaviour
         {
             Debug.Log("Game Over!");
             Destroy(gameObject);
-            Time.timeScale = 0;
+            gameManager.isGameOver = true;
         }
     }
 }

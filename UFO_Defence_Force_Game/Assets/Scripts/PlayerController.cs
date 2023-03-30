@@ -11,6 +11,13 @@ public class PlayerController : MonoBehaviour
     public Transform blaster;
     public GameObject blasterBolt;
 
+    public GameManager gameManager;
+
+    private void Start()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -32,8 +39,8 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
 
-        //if space is pressed, fire blaster
-        if(Input.GetKeyDown(KeyCode.Space))
+        //if space is pressed, fire blaster, second condition prevents fireing once game is over, 
+        if(Input.GetKeyDown(KeyCode.Space) && gameManager.isGameOver == false)
         {
             //create blaster bolt at the blaster position, keeping object rotation
             Instantiate(blasterBolt, blaster.transform.position, blasterBolt.transform.rotation);
