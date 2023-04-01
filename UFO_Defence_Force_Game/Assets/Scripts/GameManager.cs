@@ -8,6 +8,12 @@ public class GameManager : MonoBehaviour
 
     private GameObject gameOverText;
 
+    public ParticleSystem deathParticle;
+    private AudioSource ufoDeathAudio;
+    private AudioSource powerUpAudio;
+    public AudioClip explosion;
+    public AudioClip powerUpGet;
+
     private void Awake()
     {
         Time.timeScale = 1;
@@ -18,6 +24,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         gameOverText = GameObject.Find("GameOverText");
+        ufoDeathAudio = GetComponent<AudioSource>();
+        powerUpAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -31,11 +39,22 @@ public class GameManager : MonoBehaviour
         {
             gameOverText.gameObject.SetActive(false);//keep game over text hidden
         }
+        
     }
 
     public void EndGame()
     {
         gameOverText.gameObject.SetActive(true);
         Time.timeScale = 0; //freezes time
+    }
+
+    public void UFODead()
+    {
+        ufoDeathAudio.PlayOneShot(explosion, .75f);
+    }
+
+    public void PowerUp()
+    {
+        powerUpAudio.PlayOneShot(powerUpGet, .75f);
     }
 }

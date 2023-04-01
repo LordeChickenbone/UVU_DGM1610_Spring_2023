@@ -13,9 +13,13 @@ public class PlayerController : MonoBehaviour
 
     public GameManager gameManager;
 
+    public AudioClip blasterSound;
+    private AudioSource playerAudio;
+
     private void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        playerAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -44,6 +48,7 @@ public class PlayerController : MonoBehaviour
         {
             //create blaster bolt at the blaster position, keeping object rotation
             Instantiate(blasterBolt, blaster.transform.position, blasterBolt.transform.rotation);
+            playerAudio.PlayOneShot(blasterSound, 0.75f);
         }
     }
 

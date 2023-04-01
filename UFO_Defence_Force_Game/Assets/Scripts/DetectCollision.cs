@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 public class DetectCollision : MonoBehaviour
 {
     public ScoreManagerBehavior scoreManager;
@@ -28,6 +28,7 @@ public class DetectCollision : MonoBehaviour
         scoreManager.IncreaseScore(scoreToGive);
         Destroy(other.gameObject); //destroy other game object
         Destroy(gameObject); //destroy itself
+        gameManager.UFODead();
     }
 
     void Update()
