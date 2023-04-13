@@ -1,4 +1,4 @@
-using UnityEngine;
+    using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
 public class SpriteBehavior : MonoBehaviour
@@ -13,5 +13,10 @@ public class SpriteBehavior : MonoBehaviour
     public void ChangeRendererColor(ColorID obj)
     {
         rendererObj.color = obj.value;
+    }
+
+    public void ChangeRendererColor(ColorIDDataList obj)
+    {
+        rendererObj.color = obj.currentColor.value;
     }
 }
