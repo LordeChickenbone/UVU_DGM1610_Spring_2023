@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a625f6b2b68baf441afc3f148aa90c96, type: 3}
-  m_Name: V3C
+  m_Script: {fileID: 11500000, guid: beefd33ba8e90134c8c324aaaf91417f, type: 3}
+  m_Name: EndGame
   m_EditorClassIdentifier: 
-  value: {x: -3, y: 6, z: 0}

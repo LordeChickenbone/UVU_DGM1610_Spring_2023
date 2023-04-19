@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 86831000}
   - component: {fileID: 86830999}
   - component: {fileID: 86830998}
+  - component: {fileID: 86831001}
   m_Layer: 5
   m_Name: HighScoreNum
   m_TagString: Untagged
@@ -243,6 +244,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 86830996}
   m_CullTransparentMesh: 1
+--- !u!114 &86831001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86830996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d0a40e3bf159434eab60c2f47e08413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameActionObj: {fileID: 11400000, guid: ac3bce917f1c54e43a8ff1772557661b, type: 2}
+  onRaiseEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 86830998}
+        m_TargetAssemblyTypeName: TextLabelBehavior, Assembly-CSharp
+        m_MethodName: UpdateLabel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 38318757e1f9b584e9977e4d87d72015, type: 2}
+          m_ObjectArgumentAssemblyTypeName: IntData, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &162237978
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,6 +441,7 @@ GameObject:
   - component: {fileID: 261512959}
   - component: {fileID: 261512958}
   - component: {fileID: 261512957}
+  - component: {fileID: 261512960}
   m_Layer: 5
   m_Name: ScoreNum
   m_TagString: Untagged
@@ -508,6 +538,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 261512955}
   m_CullTransparentMesh: 1
+--- !u!114 &261512960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261512955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d0a40e3bf159434eab60c2f47e08413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameActionObj: {fileID: 11400000, guid: ac3bce917f1c54e43a8ff1772557661b, type: 2}
+  onRaiseEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 261512957}
+        m_TargetAssemblyTypeName: TextLabelBehavior, Assembly-CSharp
+        m_MethodName: UpdateLabel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: d3d2975151817284cb9b0e9828775e1c, type: 2}
+          m_ObjectArgumentAssemblyTypeName: IntData, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &364584468
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,6 +714,7 @@ GameObject:
   - component: {fileID: 374646513}
   - component: {fileID: 374646512}
   - component: {fileID: 374646511}
+  - component: {fileID: 374646516}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -772,6 +831,34 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &374646516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374646510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d0a40e3bf159434eab60c2f47e08413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameActionObj: {fileID: 11400000, guid: 3acf877de94afb74a8b746b17dc7361e, type: 2}
+  onRaiseEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 374646511}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Lose
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -924,6 +1011,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &592522419 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8752118097900353461, guid: 71e3ecc9f367ae24cac5fbe987148ff2, type: 3}
+  m_PrefabInstance: {fileID: 1960715709}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &929874260
 GameObject:
   m_ObjectHideFlags: 0
@@ -3179,12 +3271,40 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8752118097900353459, guid: 71e3ecc9f367ae24cac5fbe987148ff2, type: 3}
   m_PrefabInstance: {fileID: 1960715709}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 592522419}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70149b24a526efd488efbc745a87be4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1998244362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592522419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d0a40e3bf159434eab60c2f47e08413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameActionObj: {fileID: 11400000, guid: 3acf877de94afb74a8b746b17dc7361e, type: 2}
+  onRaiseEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1998244360}
+        m_TargetAssemblyTypeName: CoRoutineBehavior, Assembly-CSharp
+        m_MethodName: set_CanRun
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2130908285
 GameObject:
   m_ObjectHideFlags: 0
