@@ -20,9 +20,9 @@ public class CoRoutineBehavior : MonoBehaviour
 
     private void Start()
     {
-        wfsObj = new WaitForSeconds(seconds);
         wffuObj = new WaitForFixedUpdate();
         startEvent.Invoke();
+        wfsObj = new WaitForSeconds(seconds);
     }
 
     public void StartCounting()
@@ -54,10 +54,12 @@ public class CoRoutineBehavior : MonoBehaviour
     }
     private IEnumerator RepeatUntilFalse()
     {
-        while(canRun)
+        yield return wfsObj;
+
+        while (canRun)
         {
-            yield return wfsObj;
             repeatUntilFalseEvent.Invoke();
+            yield return wfsObj;
         }
     }
 }
