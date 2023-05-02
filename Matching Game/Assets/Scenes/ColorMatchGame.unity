@@ -3055,7 +3055,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8752118097900353459, guid: 71e3ecc9f367ae24cac5fbe987148ff2, type: 3}
       propertyPath: seconds
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8752118097900353459, guid: 71e3ecc9f367ae24cac5fbe987148ff2, type: 3}
       propertyPath: startEvent.m_PersistentCalls.m_Calls.Array.size
